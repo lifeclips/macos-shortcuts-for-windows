@@ -4,7 +4,8 @@
 ; + = Shift
 ; & = Combine two keys into a shortcut
 
-; set Capslock key: long press to switch caps lock, short press to switch input language
+; set Capslock key works like macOS
+; long press to switch caps lock, short press to switch input language
 SetStoreCapslockMode, off
 CapsLock::
 If StartTime
@@ -30,78 +31,97 @@ $!LButton::
 SendInput {Ctrl Down}{LButton}{Ctrl Up} 
 Return
 
-$!n:: 
-SendInput {Ctrl Down}{n}{Ctrl Up} 
+; select all
+$!a:: 
+SendInput {Ctrl Down}{a}{Ctrl Up} 
 Return
 
-$!z:: 
-SendInput {Ctrl Down}{z}{Ctrl Up} 
+; bold
+$!b::
+SendInput {Ctrl Down}{b}{Ctrl Up}
 Return
 
-$!x::
-SendInput {Ctrl Down}{x}{Ctrl Up}
-Return
-
+; copy
 $!c::
 SendInput {Ctrl Down}{c}{Ctrl Up}
 Return
 
+; open chrome inspect tool
 $!+c:: 
 SendInput {Ctrl Down}{Shift Down}{c}{Shift Up}{Ctrl Up} 
 Return
 
-$!+r:: 
-SendInput {Ctrl Down}{Shift Down}{r}{Shift Up}{Ctrl Up} 
-Return
-
-$!v::
-SendInput {Ctrl Down}{v}{Ctrl Up}
-Return
-
-$!b::
-SendInput {Ctrl Down}{b}{Ctrl Up}
-Return 
-
-$!a:: 
-SendInput {Ctrl Down}{a}{Ctrl Up} 
-Return 
-
-$!s:: 
-SendInput {Ctrl Down}{s}{Ctrl Up} 
-Return
-
+; find
 $!f::
 SendInput {Ctrl Down}{f}{Ctrl Up}
 Return
 
-$!q:: 
-SendInput {Alt Down}{F4}{Alt Up} 
-Return 
+; new window
+$!n:: 
+SendInput {Ctrl Down}{n}{Ctrl Up} 
+Return
 
-$!w:: 
-SendInput {Ctrl Down}{w}{Ctrl Up} 
-Return 
-
+; refresh
 $!r:: 
 SendInput {Ctrl Down}{r}{Ctrl Up} 
-Return 
+Return
 
+; forced refresh
+$!+r:: 
+SendInput {Ctrl Down}{Shift Down}{r}{Shift Up}{Ctrl Up} 
+Return
+
+; save
+$!s:: 
+SendInput {Ctrl Down}{s}{Ctrl Up} 
+Return
+
+; new tab
 $!t::
 SendInput {Ctrl Down}{t}{Ctrl Up} 
 Return
 
+; open last closed tab
 $!+t:: 
 SendInput {Ctrl Down}{Shift Down}{t}{Shift Up}{Ctrl Up} 
 Return
 
+; quit app
+$!q:: 
+SendInput {Alt Down}{F4}{Alt Up} 
+Return
+
+; paste
+$!v::
+SendInput {Ctrl Down}{v}{Ctrl Up}
+Return
+
+; close window
+$!w:: 
+SendInput {Ctrl Down}{w}{Ctrl Up} 
+Return
+
+; cut
+$!x::
+SendInput {Ctrl Down}{x}{Ctrl Up}
+Return
+
+; undo
+$!z:: 
+SendInput {Ctrl Down}{z}{Ctrl Up} 
+Return
+
+; reset zoom level
 $!0:: 
 SendInput {Ctrl Down}{0}{Ctrl Up} 
 Return
 
+; zoom smaller
 $!-:: 
 SendInput {Ctrl Down}{-}{Ctrl Up} 
 Return
 
+; zoom larger
 $!=:: 
 SendInput {Ctrl Down}{=}{Ctrl Up} 
 Return
