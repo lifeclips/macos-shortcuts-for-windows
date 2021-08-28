@@ -30,6 +30,10 @@ $!LButton::
 SendInput {Ctrl Down}{LButton}{Ctrl Up} 
 Return
 
+$!n:: 
+SendInput {Ctrl Down}{n}{Ctrl Up} 
+Return
+
 $!z:: 
 SendInput {Ctrl Down}{z}{Ctrl Up} 
 Return
