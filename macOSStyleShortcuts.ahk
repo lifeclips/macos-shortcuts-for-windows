@@ -50,6 +50,10 @@ $!+c::
 SendInput {Ctrl Down}{Shift Down}{c}{Shift Up}{Ctrl Up} 
 Return
 
+$!+r:: 
+SendInput {Ctrl Down}{Shift Down}{r}{Shift Up}{Ctrl Up} 
+Return
+
 $!v::
 SendInput {Ctrl Down}{v}{Ctrl Up}
 Return
