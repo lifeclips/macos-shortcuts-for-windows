@@ -4,7 +4,7 @@
 ; + = Shift
 ; & = Combine two keys into a shortcut
 
-; setting Capslock key works like macOS
+; set Capslock key working like macOS
 ; long press to switch caps lock, short press to switch input language
 SetStoreCapslockMode, off
 CapsLock::
