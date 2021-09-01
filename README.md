@@ -1,3 +1,3 @@
 # autohotkey
 
-Use macOS style shortcuts on Windows.
+Use macOS-style shortcuts on Windows.
