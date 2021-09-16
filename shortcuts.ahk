@@ -61,6 +61,11 @@ $!f::
 SendInput {Ctrl Down}{f}{Ctrl Up}
 Return
 
+; duplicate selected area in PhotoShop
+$!j::
+SendInput {Ctrl Down}{j}{Ctrl Up}
+Return
+
 ; new window
 $!n:: 
 SendInput {Ctrl Down}{n}{Ctrl Up} 
