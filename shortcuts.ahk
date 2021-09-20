@@ -51,7 +51,7 @@ $!+c::
 SendInput {Ctrl Down}{Shift Down}{c}{Shift Up}{Ctrl Up} 
 Return
 
-; back to desktop & clear selection in PS
+; clear selection in PS
 $!d::
 SendInput {Ctrl Down}{d}{Ctrl Up}
 Return
