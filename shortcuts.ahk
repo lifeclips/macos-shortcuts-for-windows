@@ -138,5 +138,5 @@ Return
 
 ; custom key to lock computer
 $sc072::
-run rundll32.exe user32.dll`,LockWorkStation 
+run rundll32.exe user32.dll`,LockWorkStation
 Return
