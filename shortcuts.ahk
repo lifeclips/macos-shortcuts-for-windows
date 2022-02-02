@@ -17,7 +17,7 @@ CapsLock up::
 TimeLength := A_TickCount - StartTime
 if (TimeLength >= 1 and TimeLength < 200)
 {
-    Send, ^{Space}
+    Send, {LShift}
 }
 else if (TimeLength >= 200)
 {
