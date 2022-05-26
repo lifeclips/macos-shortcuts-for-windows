@@ -62,7 +62,7 @@ $!f::
 SendInput {Ctrl Down}{f}{Ctrl Up}
 Return
 
-; duplicate selected area in PhotoShop
+; duplicate selected area in PS
 $!j::
 SendInput {Ctrl Down}{j}{Ctrl Up}
 Return
@@ -137,7 +137,7 @@ $!=::
 SendInput {Ctrl Down}{=}{Ctrl Up} 
 Return
 
-; custom key to lock computer
+; custom key to lock computer (only work on my PC, you can delete it)
 $sc072::
 run rundll32.exe user32.dll`,LockWorkStation
 Return
