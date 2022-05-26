@@ -5,26 +5,27 @@
 ; & = Combine two keys into a shortcut
 
 ; set Capslock key working like macOS
-; long press to switch caps lock, short press to switch input language
+; when caps is unlock, long press to switch caps lock, short press to switch input language
+; when caps is lock, short press to switch caps unlock
 SetStoreCapslockMode, off
-CapsLock::
-If StartTime
-    return
-StartTime := A_TickCount
-return
+Capslock::
+    KeyWait, CapsLock
+    If GetKeyState("CapsLock", "T") = 0
+        If (A_TimeSinceThisHotkey > 300)
+            SetTimer, mainp, -1
+        Else
+            ; if you only use chinese input, and shift bewteen chinese mode and english mode
+            Send, {LShift}
+            ; if you use multiple input keyboards, shift bewteen different languages
+            ; Send, ^{Space}
+    Else
+        If (A_TimeSinceThisHotkey < 300)
+            SetTimer, mainp, -1
+Return
 
-CapsLock up::
-TimeLength := A_TickCount - StartTime
-if (TimeLength >= 1 and TimeLength < 200)
-{
-    Send, {LShift}
-}
-else if (TimeLength >= 200)
-{
+mainp:
     Send, {CapsLock}
-}
-StartTime := ""
-return
+Return
 
 ; open link in new window
 $!LButton::
@@ -81,7 +82,7 @@ $!r::
 SendInput {Ctrl Down}{r}{Ctrl Up} 
 Return
 
-; force refresh
+; forced refresh
 $!+r:: 
 SendInput {Ctrl Down}{Shift Down}{r}{Shift Up}{Ctrl Up} 
 Return
